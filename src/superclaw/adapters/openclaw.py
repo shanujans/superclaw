@@ -54,7 +54,7 @@ class OpenClawAdapter(AgentAdapter):
 
             self._ws = await websockets.connect(
                 self.target,
-                additional_headers=headers if headers else None,
+                additional_headers=headers if headers else {},
                 open_timeout=self.open_timeout,
             )
 
